@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wx2codex-agent"
+version = "0.1.0"
+description = "macOS local agent for WeChat iLink <-> Codex bridge"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "wx2codex" }]
+dependencies = ["pycryptodomex>=3.20", "qrcode>=7.4"]
+
+[project.scripts]
+wx2codex = "wx2codex_agent.cli:main"
+
+[tool.setuptools]
+packages = ["wx2codex_agent"]

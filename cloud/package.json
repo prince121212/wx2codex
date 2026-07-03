@@ -1,0 +1,18 @@
+{
+  "name": "wx2codex-cloud",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "migrate:local": "wrangler d1 execute wx2codex-db --local --file=./migrations/0001_init.sql",
+    "migrate:remote": "wrangler d1 execute wx2codex-db --remote --file=./migrations/0001_init.sql",
+    "migrate:membership:local": "wrangler d1 execute wx2codex-db --local --file=./migrations/0002_membership.sql",
+    "migrate:membership:remote": "wrangler d1 execute wx2codex-db --remote --file=./migrations/0002_membership.sql",
+    "check": "node --check src/index.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.86.0"
+  }
+}

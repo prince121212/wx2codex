@@ -1,0 +1,27 @@
+name = "wx2codex-cloud"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+workers_dev = true
+preview_urls = false
+
+routes = [
+  { pattern = "codex.292828.xyz", custom_domain = true }
+]
+
+[vars]
+CONTEXT_TTL_HOURS = "24"
+HEARTBEAT_MIN_INTERVAL_SECONDS = "3600"
+TRIAL_DAYS = "7"
+ANNUAL_PRICE_CENTS = "990"
+ANNUAL_DAYS = "365"
+PAYMENT_EXPIRE_MINUTES = "5"
+ILINK_BASE_URL = "https://ilinkai.weixin.qq.com"
+WECHAT_PAY_APP_ID = "wx6800a178fb2307f8"
+WECHAT_PAY_MCH_ID = "1114804480"
+WECHAT_PAY_MERCHANT_SERIAL_NO = "34FEF64213455A1BF571CF75C57D9B4648562A52"
+WECHAT_PAY_NOTIFY_URL = "https://codex.292828.xyz/v1/pay/wechat/notify"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "wx2codex-db"
+database_id = "1ded5077-92e2-4a46-b951-ab5363f835e3"
